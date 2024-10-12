@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #0066cc;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      strong {
+        color: #cc0000;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      strong {
+        color: #009900;
+      }
+
+      img {
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Result</h1>
+
+    <p>
+      The uploaded image shows <strong>{{ result['disease'] }}</strong>.
+    </p>
+
+    <p> Here is some information:</p>
+
+    <strong>Course:</strong> <p>{{ result['course'] }}</p>
+
+    <strong>Control Measures:</strong> <p>{{ result['control_measure'] }}</p>
+
+    <img
+      src="data:image/jpeg;base64,{{ result['image'] }}"
+      alt="Uploaded Image"
+    />
+  </body>
+</html>
